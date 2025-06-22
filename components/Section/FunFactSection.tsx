@@ -1,3 +1,4 @@
+import { THEMES } from "@/style/colors";
 import {
   Image,
   ImageSourcePropType,
@@ -8,7 +9,7 @@ import {
 import { WrapperBgImage } from "../Layout/WrapperBgImage";
 
 type FunFactSectionProps = {
-  weather?: string | undefined;
+  weather?: "haru" | "fuyu" | "natsu" | "aki" | undefined;
   bgImage: ImageSourcePropType | undefined;
   textFunFactImage: ImageSourcePropType | undefined;
   handleNext: () => void;
@@ -18,7 +19,7 @@ const FunFactSection = ({
   weather,
   bgImage,
   textFunFactImage,
-  handleNext
+  handleNext,
 }: FunFactSectionProps) => {
   return (
     <WrapperBgImage src={bgImage}>
@@ -43,7 +44,13 @@ const FunFactSection = ({
         {weather === "aki" && (
           <Image
             source={require("@/assets/images/tree.png")}
-            style={{ width: "50%", height: 200, position: "absolute", bottom: 125, right: 20 }}
+            style={{
+              width: "50%",
+              height: 200,
+              position: "absolute",
+              bottom: 125,
+              right: 20,
+            }}
           />
         )}
         <TouchableOpacity
@@ -74,7 +81,7 @@ const styles = StyleSheet.create({
   },
   container: {
     width: "90%",
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
+    backgroundColor: THEMES.default.backgroundTheme,
     borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",

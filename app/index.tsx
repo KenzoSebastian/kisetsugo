@@ -1,6 +1,9 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HaruFunFact from "./pages/haru/funFact";
+import HaruKatoba from "./pages/haru/katoba";
+import HaruLatihan from "./pages/haru/latihan";
 import HaruMain from "./pages/haru/main";
+import HaruPolaKalimat from "./pages/haru/polaKalimat";
 import Loading from "./pages/loading";
 import Main from "./pages/main";
 import Menu from "./pages/menu";
@@ -24,6 +27,7 @@ const pagesScreen: pagesScreenType[] = [
     name: "loading",
     component: Loading,
   },
+  // Haru pages
   {
     name: "haruMain",
     component: HaruMain,
@@ -32,11 +36,23 @@ const pagesScreen: pagesScreenType[] = [
     name: "haruFunFact",
     component: HaruFunFact,
   },
+  {
+    name: "haruKatoba",
+    component: HaruKatoba,
+  },
+  {
+    name: "haruPolaKalimat",
+    component: HaruPolaKalimat,
+  },
+  {
+    name: "haruLatihan",
+    component: HaruLatihan,
+  },
 ];
 
 export default function Index() {
   return (
-    <pages.Navigator initialRouteName="main">
+    <pages.Navigator initialRouteName="haruMain">
       {pagesScreen.map((page) => (
         <pages.Screen
           key={page.name}
@@ -49,7 +65,7 @@ export default function Index() {
   );
 }
 
-type PageName = typeof pagesScreen[number]["name"];
+type PageName = (typeof pagesScreen)[number]["name"];
 
 export type RootStackParamList = {
   [K in PageName]: undefined | { data: any };
