@@ -86,7 +86,11 @@ const SoalSection = ({
           >
             <Image
               source={opsiA}
-              style={{ height: 50, width: 90, resizeMode: "contain" }}
+              style={{
+                height: type === "type1" ? 50 : 70,
+                width: type === "type1" ? 90 : 230,
+                resizeMode: "contain",
+              }}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -107,7 +111,11 @@ const SoalSection = ({
           >
             <Image
               source={opsiB}
-              style={{ height: 50, width: 90, resizeMode: "contain" }}
+              style={{
+                height: type === "type1" ? 50 : 70,
+                width: type === "type1" ? 90 : 230,
+                resizeMode: "contain",
+              }}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -128,7 +136,11 @@ const SoalSection = ({
           >
             <Image
               source={opsiC}
-              style={{ height: 50, width: 90, resizeMode: "contain" }}
+              style={{
+                height: type === "type1" ? 50 : 70,
+                width: type === "type1" ? 90 : 230,
+                resizeMode: "contain",
+              }}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -149,7 +161,11 @@ const SoalSection = ({
           >
             <Image
               source={opsiD}
-              style={{ height: 50, width: 90, resizeMode: "contain" }}
+              style={{
+                height: type === "type1" ? 50 : 70,
+                width: type === "type1" ? 90 : 230,
+                resizeMode: "contain",
+              }}
             />
           </TouchableOpacity>
         </View>
