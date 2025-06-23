@@ -52,7 +52,7 @@ const pagesScreen: pagesScreenType[] = [
 
 export default function Index() {
   return (
-    <pages.Navigator initialRouteName="haruMain">
+    <pages.Navigator initialRouteName="main">
       {pagesScreen.map((page) => (
         <pages.Screen
           key={page.name}

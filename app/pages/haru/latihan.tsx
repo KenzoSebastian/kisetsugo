@@ -1,11 +1,12 @@
+import LatihanSection from "@/components/Section/LatihanSection";
 import React from "react";
-import { Text, View } from "react-native";
 
 const HaruLatihan = () => {
   return (
-    <View>
-      <Text>HaruLatihan</Text>
-    </View>
+    <LatihanSection
+      bgImage={require("@/assets/images/background/haru.png")}
+      logoImage={require("@/assets/images/weather/logo-haru.png")}
+    />
   );
 };
 
