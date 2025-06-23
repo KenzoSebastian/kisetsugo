@@ -1,5 +1,4 @@
 import KatobaPolaKalimatSection from "@/components/Section/Katoba&PolaKalimatSection";
-import React from "react";
 
 const HaruKatoba = () => {
   return (

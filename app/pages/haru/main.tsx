@@ -1,5 +1,4 @@
 import MainWeatherSection from "@/components/Section/MainWeatherSection";
-import React from "react";
 
 const HaruMain = () => {
   return (

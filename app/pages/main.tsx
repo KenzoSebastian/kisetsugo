@@ -1,5 +1,4 @@
 import { RootStackParamList } from "@/app";
-
 import { WrapperBgImage } from "@/components/Layout/WrapperBgImage";
 import { globalStyle } from "@/style/global.style";
 import { useNavigation } from "@react-navigation/native";

@@ -15,9 +15,10 @@ import { WrapperBgImage } from "../Layout/WrapperBgImage";
 type LatihanSectionProps = {
   bgImage: ImageSourcePropType | undefined;
   logoImage: ImageSourcePropType | undefined;
+  weather: "haru" | "fuyu" | "natsu" | "aki";
 };
 
-const LatihanSection = ({ bgImage, logoImage }: LatihanSectionProps) => {
+const LatihanSection = ({ bgImage, logoImage, weather }: LatihanSectionProps) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
@@ -48,7 +49,7 @@ const LatihanSection = ({ bgImage, logoImage }: LatihanSectionProps) => {
               style={{ height: 100, width: 160, resizeMode: "contain" }}
             />
           </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.7} onPress={() => {}}>
+          <TouchableOpacity activeOpacity={0.7} onPress={() => {navigation.navigate(`${weather}Soal1`)}}>
             <Image
               source={require("@/assets/images/yes.png")}
               style={{ height: 100, width: 160, resizeMode: "contain" }}

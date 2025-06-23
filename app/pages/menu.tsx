@@ -4,7 +4,6 @@ import { THEMES } from "@/style/colors";
 import { globalStyle } from "@/style/global.style";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Menu = () => {

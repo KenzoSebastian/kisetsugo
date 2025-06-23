@@ -2,7 +2,6 @@ import { RootStackParamList } from "@/app";
 import FunFactSection from "@/components/Section/FunFactSection";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import React from "react";
 
 const HaruFunFact = () => {
     const navigation =
