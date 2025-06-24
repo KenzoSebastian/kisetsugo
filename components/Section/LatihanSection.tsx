@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
     marginTop: 45,
   },
   personImage: {
-    width: 370,
-    height: 370,
+    width: 320,
+    height: 320,
     position: "absolute",
     bottom: -40,
     right: -70,

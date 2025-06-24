@@ -6,8 +6,8 @@ export const globalStyle = StyleSheet.create({
     height: 75,
   },
   personPrimary: {
-    width: 500,
-    height: 500,
+    width: 470,
+    height: 470,
     position: "absolute",
     bottom: -15,
   },

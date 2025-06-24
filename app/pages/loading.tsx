@@ -38,7 +38,7 @@ export default Loading;
 const styles = StyleSheet.create({
   containerLoading: {
     position: "absolute",
-    bottom: 160,
+    bottom: 140,
     width: "82%",
     alignItems: "center",
     paddingVertical: 40,

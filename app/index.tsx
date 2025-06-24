@@ -1,4 +1,12 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import AkiFunFact from "./pages/aki/funFact";
+import AkiKatoba from "./pages/aki/katoba";
+import AkiMain from "./pages/aki/main";
+import AkiPolaKalimat from "./pages/aki/polaKalimat";
+import AkiSoal1 from "./pages/aki/soal1";
+import AkiSoal2 from "./pages/aki/soal2";
+import AkiSoal3 from "./pages/aki/soal3";
+import AkiSoal4 from "./pages/aki/soal4";
 import Closing from "./pages/closing";
 import CorrectAnswer from "./pages/correctAnswer";
 import HaruFunFact from "./pages/haru/funFact";
@@ -22,7 +30,18 @@ import NatsuSoal1 from "./pages/natsu/soal1";
 import NatsuSoal2 from "./pages/natsu/soal2";
 import NatsuSoal3 from "./pages/natsu/soal3";
 import NatsuSoal4 from "./pages/natsu/soal4";
+import AkiLatihan from "./pages/aki/latihan";
+import FuyuFunFact from "./pages/fuyu/funFact";
+import FuyuKatoba from "./pages/fuyu/katoba";
+import FuyuLatihan from "./pages/fuyu/latihan";
+import FuyuMain from "./pages/fuyu/main";
+import FuyuPolaKalimat from "./pages/fuyu/polaKalimat";
+import FuyuSoal1 from "./pages/fuyu/soal1";
+import FuyuSoal2 from "./pages/fuyu/soal2";
+import FuyuSoal3 from "./pages/fuyu/soal3";
+import FuyuSoal4 from "./pages/fuyu/soal4";
 import WrongAnswer from "./pages/wrongAnswer";
+import MusicPlayer from "@/components/MusicPlayer";
 
 const pages = createNativeStackNavigator();
 
@@ -85,7 +104,8 @@ const pagesScreen: pagesScreenType[] = [
     name: "haruSoal4",
     component: HaruSoal4,
   },
-  // natsu pages
+
+  // Natsu pages
   {
     name: "natsuMain",
     component: NatsuMain,
@@ -123,6 +143,82 @@ const pagesScreen: pagesScreenType[] = [
     component: NatsuSoal4,
   },
 
+  // Aki pages
+  {
+    name: "akiMain",
+    component: AkiMain,
+  },
+  {
+    name: "akiFunFact",
+    component: AkiFunFact,
+  },
+  {
+    name: "akiKatoba",
+    component: AkiKatoba,
+  },
+  {
+    name: "akiPolaKalimat",
+    component: AkiPolaKalimat,
+  },
+  {
+    name: "akiLatihan",
+    component: AkiLatihan,
+  },
+  {
+    name: "akiSoal1",
+    component: AkiSoal1,
+  },
+  {
+    name: "akiSoal2",
+    component: AkiSoal2,
+  },
+  {
+    name: "akiSoal3",
+    component: AkiSoal3,
+  },
+  {
+    name: "akiSoal4",
+    component: AkiSoal4,
+  },
+
+  // Fuyu pages
+  {
+    name: "fuyuMain",
+    component: FuyuMain,
+  },
+  {
+    name: "fuyuFunFact",
+    component: FuyuFunFact,
+  },
+  {
+    name: "fuyuKatoba",
+    component: FuyuKatoba,
+  },
+  {
+    name: "fuyuPolaKalimat",
+    component: FuyuPolaKalimat,
+  },
+  {
+    name: "fuyuLatihan",
+    component: FuyuLatihan,
+  },
+  {
+    name: "fuyuSoal1",
+    component: FuyuSoal1,
+  },
+  {
+    name: "fuyuSoal2",
+    component: FuyuSoal2,
+  },
+  {
+    name: "fuyuSoal3",
+    component: FuyuSoal3,
+  },
+  {
+    name: "fuyuSoal4",
+    component: FuyuSoal4,
+  },
+
   // Correct and Wrong Answer
   {
     name: "correct",
@@ -136,16 +232,19 @@ const pagesScreen: pagesScreenType[] = [
 
 export default function Index() {
   return (
-    <pages.Navigator initialRouteName="main">
-      {pagesScreen.map((page) => (
-        <pages.Screen
-          key={page.name}
-          name={page.name}
-          component={page.component}
-          options={{ headerShown: false }}
-        />
-      ))}
-    </pages.Navigator>
+    <>
+      <MusicPlayer />
+      <pages.Navigator initialRouteName="main">
+        {pagesScreen.map((page) => (
+          <pages.Screen
+            key={page.name}
+            name={page.name}
+            component={page.component}
+            options={{ headerShown: false }}
+          />
+        ))}
+      </pages.Navigator>
+    </>
   );
 }
 

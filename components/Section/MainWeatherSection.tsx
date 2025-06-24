@@ -33,7 +33,7 @@ const MainWeatherSection = ({
     <WrapperBgImage src={bgImage}>
       <TouchableOpacity
         activeOpacity={0.7}
-        onPress={() => navigation.popToTop()}
+        onPress={() => navigation.popTo("menu")}
         style={globalStyle.navHeader}
       >
         <Image
@@ -101,8 +101,8 @@ const MainWeatherSection = ({
           <Image
             source={require("@/assets/images/tree.png")}
             style={{
-              width: 220,
-              height: 220,
+              width: 200,
+              height: 165,
               position: "absolute",
               bottom: 0,
             }}

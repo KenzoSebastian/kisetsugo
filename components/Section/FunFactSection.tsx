@@ -46,16 +46,16 @@ const FunFactSection = ({
             source={require("@/assets/images/tree.png")}
             style={{
               width: "50%",
-              height: 200,
+              height: 170,
               position: "absolute",
-              bottom: 125,
+              bottom: 120,
               right: 20,
             }}
           />
         )}
         <TouchableOpacity
           activeOpacity={0.7}
-          style={{ ...styles.nextButtonContainer, width: 180, height: 180 }}
+          style={{ ...styles.nextButtonContainer, width: 200, height: 80 }}
           onPress={handleNext}
         >
           <Image
@@ -72,11 +72,11 @@ export default FunFactSection;
 
 const styles = StyleSheet.create({
   personImage: {
-    width: 250,
-    height: 250,
+    width: 230,
+    height: 230,
     position: "absolute",
     bottom: 0,
-    left: -60,
+    left: -50,
     zIndex: 50,
   },
   container: {
@@ -94,7 +94,8 @@ const styles = StyleSheet.create({
     right: 20,
   },
   nextButton: {
-    width: 180,
-    height: 180,
+    width: 200,
+    height: 80,
+    resizeMode: "contain",
   },
 });

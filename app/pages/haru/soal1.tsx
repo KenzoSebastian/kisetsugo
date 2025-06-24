@@ -9,7 +9,7 @@ const HaruSoal1 = () => {
       opsiB={require("@/assets/images/opsi/haru/opsi-1b.png")}
       opsiC={require("@/assets/images/opsi/haru/opsi-1c.png")}
       opsiD={require("@/assets/images/opsi/haru/opsi-1d.png")}
-      correctAnswer="B"
+      correctAnswer="A"
       weather="haru"
       type="type1"
       nomorSoal={1}

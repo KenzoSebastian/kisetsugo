@@ -3,7 +3,13 @@ import { WrapperBgImage } from "@/components/Layout/WrapperBgImage";
 import { globalStyle } from "@/style/global.style";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import {
+  BackHandler,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 const Main = () => {
   const navigation =
@@ -19,7 +25,7 @@ const Main = () => {
       >
         <TouchableOpacity
           activeOpacity={0.7}
-          onPress={() => console.log("click exit")}
+          onPress={() => BackHandler.exitApp()}
         >
           <Image
             source={require("@/assets/images/exit.png")}

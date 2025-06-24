@@ -81,6 +81,8 @@ const SoalSection = ({
             }}
             style={{
               backgroundColor: THEMES.pink.backgroundTheme,
+              paddingHorizontal:
+                type === "type2" && weather === "fuyu" ? 10 : 30,
               ...styles.opsiWrap,
             }}
           >
@@ -88,7 +90,7 @@ const SoalSection = ({
               source={opsiA}
               style={{
                 height: type === "type1" ? 50 : 70,
-                width: type === "type1" ? 90 : 230,
+                width: type === "type1" ? 90 : weather === "fuyu" ? 300 : 230,
                 resizeMode: "contain",
               }}
             />
@@ -106,6 +108,8 @@ const SoalSection = ({
             }}
             style={{
               backgroundColor: THEMES.yellow.backgroundTheme,
+              paddingHorizontal:
+                type === "type2" && weather === "fuyu" ? 10 : 30,
               ...styles.opsiWrap,
             }}
           >
@@ -113,7 +117,7 @@ const SoalSection = ({
               source={opsiB}
               style={{
                 height: type === "type1" ? 50 : 70,
-                width: type === "type1" ? 90 : 230,
+                width: type === "type1" ? 90 : weather === "fuyu" ? 300 : 230,
                 resizeMode: "contain",
               }}
             />
@@ -131,6 +135,8 @@ const SoalSection = ({
             }}
             style={{
               backgroundColor: THEMES.brown.backgroundTheme,
+              paddingHorizontal:
+                type === "type2" && weather === "fuyu" ? 10 : 30,
               ...styles.opsiWrap,
             }}
           >
@@ -138,7 +144,7 @@ const SoalSection = ({
               source={opsiC}
               style={{
                 height: type === "type1" ? 50 : 70,
-                width: type === "type1" ? 90 : 230,
+                width: type === "type1" ? 90 : weather === "fuyu" ? 300 : 230,
                 resizeMode: "contain",
               }}
             />
@@ -156,6 +162,8 @@ const SoalSection = ({
             }}
             style={{
               backgroundColor: THEMES.blue.backgroundTheme,
+              paddingHorizontal:
+                type === "type2" && weather === "fuyu" ? 10 : 30,
               ...styles.opsiWrap,
             }}
           >
@@ -163,7 +171,7 @@ const SoalSection = ({
               source={opsiD}
               style={{
                 height: type === "type1" ? 50 : 70,
-                width: type === "type1" ? 90 : 230,
+                width: type === "type1" ? 90 : weather === "fuyu" ? 300 : 230,
                 resizeMode: "contain",
               }}
             />
@@ -184,7 +192,6 @@ const styles = StyleSheet.create({
   },
   opsiWrap: {
     borderRadius: 20,
-    paddingHorizontal: 30,
     overflow: "hidden",
   },
 });
